@@ -1,16 +1,17 @@
-import { TexturedObject, DiffuseObject, Terrain, Sun } from "./objects";
-import { Camera } from "./camera";
-import { PointLight, Lighting } from "./lights";
-import { KeyUpAndDown, MouseMovement, MouseClicks } from "./inputs";
-import { Box, Octaedro } from "./creator";
-import { ControlPanel, Display } from "./controls";
-import { indexWallArray, normalWallArray, vertexWallArray } from "./dataObjects";
-import { invertTriangularClock } from "./glx_functions";
-import { rotateMat_x, rotateMat_y, rotateMat_z } from "./matrix";
-import { RENDER } from "./renderer";
-import { DrawerProgram, ShadowProgram } from "./program";
-import { ColorTexture } from "./textures";
-import { Frame, initGL, WalkingCam } from "./myWebGl";
+import { TexturedObject, DiffuseObject, Terrain, Sun } from "./objects.js";
+import { Camera } from "./camera.js";
+import { PointLight, Lighting } from "./lights.js";
+import { KeyUpAndDown, MouseMovement, MouseClicks } from "./inputs.js";
+import { Box, Octaedro } from "./creator.js";
+import { ControlPanel, Display } from "./controls.js";
+import { indexWallArray, normalWallArray, vertexWallArray } from "./dataObjects.js";
+import { invertTriangularClock } from "./glx_functions.js";
+import { rotateMat_x, rotateMat_y, rotateMat_z } from "./matrix.js";
+import { RENDER } from "./renderer.js";
+import { DrawerProgram, ShadowProgram } from "./program.js";
+import { ColorTexture } from "./textures.js";
+import { Frame, initGL, WalkingCam } from "./myWebGl.js";
+
 
 
 const objArray = ['objs/pisoCountry.obj', 'objs/guia.obj', 'objs/dado.obj', 'objs/dadoRojo.obj', 'objs/octaedro.obj', 'objs/sol.obj'];
