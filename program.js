@@ -1,7 +1,9 @@
-class Program {
+import { Shader } from "./myWebGl";
+
+export class Program {
     constructor(gl, vertexShader, fragmentShader) {
         this.program = gl.createProgram();
-        
+
         gl.attachShader(this.program, vertexShader);
         gl.attachShader(this.program, fragmentShader);
         gl.linkProgram(this.program);
@@ -44,7 +46,7 @@ class Program {
     }
 }
 
-class DrawerProgram {
+export class DrawerProgram {
     constructor(gl, vertexShader, fragmentShader) {
         this.gl = gl;
         this.program = gl.createProgram();
@@ -93,13 +95,13 @@ class DrawerProgram {
         this.brightnessUniLoc = gl.getUniformLocation(this.program, 'u_brightness');//
         this.numActivePointUniLoc = gl.getUniformLocation(this.program, 'u_numActivePoint')
         this.numActivePointFragUniLoc = gl.getUniformLocation(this.program, 'u_numActivePointFrag')
-        
+
         this.numPointLightsUniLoc = gl.getUniformLocation(this.program, 'numPointLights');
         this.camPositionUniLoc = gl.getUniformLocation(this.program, 'u_camPosition');
     }
 }
 
-class ShadowProgram {
+export class ShadowProgram {
     constructor(gl, vertexShader, fragmentShader) {
         this.gl = gl;
         this.program = gl.createProgram();
@@ -125,7 +127,7 @@ class ShadowProgram {
     }
 }
 
-class DepthProgram {
+export class DepthProgram {
     constructor(gl, vertexShader, fragmentShader) {
         this.gl = gl;
         this.program = gl.createProgram();

@@ -1,3 +1,4 @@
+import { IBO, VBO } from "./buffers";
 import { DiffuseObjectControls, SunControls } from "./controls";
 import { TerrainControls } from "./controls";
 import { angleBetweenVectors, angleOfVectorWithZAxisOnXZPlane, assignMat4, differenceBetweenVectors3, identityMat4x4, normalize3, normalOf, orientViewY, rotateOwnAxisX, scalarMat4x4, triangleArea } from "./matrix";

@@ -8,6 +8,9 @@ import { indexWallArray, normalWallArray, vertexWallArray } from "./dataObjects"
 import { invertTriangularClock } from "./glx_functions";
 import { rotateMat_x, rotateMat_y, rotateMat_z } from "./matrix";
 import { RENDER } from "./renderer";
+import { DrawerProgram, ShadowProgram } from "./program";
+import { ColorTexture } from "./textures";
+import { Frame, initGL, WalkingCam } from "./myWebGl";
 
 
 const objArray = ['objs/pisoCountry.obj', 'objs/guia.obj', 'objs/dado.obj', 'objs/dadoRojo.obj', 'objs/octaedro.obj', 'objs/sol.obj'];

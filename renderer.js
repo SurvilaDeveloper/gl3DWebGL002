@@ -1,3 +1,6 @@
+import { FBO } from "./buffers";
+import { DepthProgram } from "./program";
+import { DepthTexture } from "./textures";
 import { applyTransformations } from "./transformations";
 
 

@@ -1,4 +1,4 @@
-class Frame {
+export class Frame {
     constructor(frame_id, container_tag, html_position, canvas_id, width, height) {
         this.frameId = frame_id;
         this.containerTag = container_tag;
@@ -46,7 +46,7 @@ class Frame {
     }
 }
 
-class Canvas {
+export class Canvas {
     constructor(_id, _familiar_tag) {
         this.id = _id;
         this.familiar_tag = document.getElementById(_familiar_tag);
@@ -119,7 +119,7 @@ class Canvas {
         }*/
 }
 
-class Shader {
+export class Shader {
     constructor(gl, type, source) {
         this.shader = gl.createShader(type);
         gl.shaderSource(this.shader, source);
@@ -139,7 +139,7 @@ function getUniformLocation(gl, pro, name) {
     return gl.getUniformLocation(pro, name);
 }
 
-class WalkingCam {
+export class WalkingCam {
     constructor(camera, keysDown, mouseMovements, mouseClicks, terrain) {
         this.cam = camera;
         this.terrain = terrain || undefined;
@@ -216,7 +216,7 @@ class WalkingCam {
     }
 }
 
-class WalkingObject {
+export class WalkingObject {
     constructor(object, keysDown, mouseMovements, mouseClicks, terrain, walkingVelocity = 0.1, smooth = 1) {
         this.object = object;
         this.terrain = terrain || undefined;
@@ -335,7 +335,7 @@ class WalkingObject {
     }
 }
 
-class Geometry {
+export class Geometry {
     constructor(faces, type) {
         this.type = type; //tipo de primitiva (triangulo = 3; cuadrados = 4)
         //console.log('type', this.type);
@@ -466,7 +466,7 @@ class animationGeometries {
         return frames;
     }
 }*/
-class animationGeometries {
+export class animationGeometries {
     constructor() {
         this.frames = [];
     }
@@ -493,7 +493,7 @@ class animationGeometries {
     }
 }
 
-class TransformationsPath {
+export class TransformationsPath {
     constructor(positions, rotations, scales) {
         this.positions = positions;
         this.rotations = rotations;
@@ -553,13 +553,13 @@ class TransformationsPath {
         });*/
 }
 
-class Face {
+export class Face {
     constructor(vertices) {
         this.vertices = vertices || []
     }
 }
 
-class Vertex {
+export class Vertex {
     constructor(position, normal, uv) {
         this.position = position || new Vector3()
         this.normal = normal || new Vector3()
@@ -567,7 +567,7 @@ class Vertex {
     }
 }
 
-class Vector3 {
+export class Vector3 {
     constructor(x, y, z) {
         this.x = Number(x) || 0
         this.y = Number(y) || 0
@@ -575,7 +575,7 @@ class Vector3 {
     }
 }
 
-class Vector2 {
+export class Vector2 {
     constructor(x, y) {
         this.x = Number(x) || 0
         this.y = Number(y) || 0
@@ -606,7 +606,7 @@ async function initGL(vertexShaderes = [], fragmentShaderes = [], objs = [], ima
     mainFunction(objFiles, imageFiles, vertexShaderFiles, fragmentShaderFiles, animationsFiles);
 }*/
 
-async function initGL(vertexShaderes = [], fragmentShaderes = [], objs = [], images = [], animations = [], transformPath = [], callback) {
+export async function initGL(vertexShaderes = [], fragmentShaderes = [], objs = [], images = [], animations = [], transformPath = [], callback) {
     try {
         const filesData = [];
         const objFiles = await Promise.all(objs.map(obj => Geometry.loadOBJ(obj)));
@@ -633,7 +633,7 @@ async function initGL(vertexShaderes = [], fragmentShaderes = [], objs = [], ima
 }
 
 
-class ImageGL {
+export class ImageGL {
     constructor(image) {
         this.image = image;
         //console.log(this.image);
@@ -649,7 +649,7 @@ class ImageGL {
     }
 }
 
-class ShaderGL {
+export class ShaderGL {
     static loadShader(url) {
         return new Promise(function (resolve) {
             var xhr = new XMLHttpRequest()
@@ -664,7 +664,7 @@ class ShaderGL {
     }
 }
 
-class TextureViewer {
+export class TextureViewer {
     constructor(_id, container_tag, _board_width, _board_height, zoom) {
         this.id = _id;
         this.container_tag = container_tag;
@@ -752,7 +752,7 @@ class TextureViewer {
 /**
  * @param textureArray8 - array con hasta 8 texturas
  */
-class ColorTexture8 {
+export class ColorTexture8 {
     constructor(gl) {
         this.gl = gl;
         this.framebuffer = this.gl.createFramebuffer();

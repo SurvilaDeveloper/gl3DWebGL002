@@ -1,4 +1,4 @@
-class Texture {
+export class Texture {
     constructor(gl, textureNumber, width, height) {
         this.gl = gl;
         this.textureNumber = textureNumber;
@@ -43,7 +43,7 @@ class Texture {
     }
 }
 
-class ColorTexture {
+export class ColorTexture {
     constructor(gl, textureNumber, imageGL) {
         this.gl = gl;
         this.textureNumber = textureNumber;
@@ -92,7 +92,7 @@ class ColorTexture {
     }
 }
 
-class DepthTexture {
+export class DepthTexture {
     constructor(gl, textureNumber, width, height) {
         this.gl = gl;
         this.textureNumber = textureNumber;
@@ -139,10 +139,3 @@ class DepthTexture {
         this.gl.bindTexture(this.gl.TEXTURE_2D, null);
     }
 }
-
-
-
-
-
-
-

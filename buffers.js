@@ -1,4 +1,4 @@
-class VBO {
+export class VBO {
     constructor(gl, data, count) {
         this.gl = gl;
         this.data = data;
@@ -27,7 +27,7 @@ class VBO {
     }
 }
 
-class IBO {
+export class IBO {
     constructor(gl, data) {
         this.gl = gl;
         this.data = data;
@@ -43,7 +43,7 @@ class IBO {
     }
 }
 
-class FBO {
+export class FBO {
     constructor(gl) {
         this.gl = gl;
         this.buffer = this.gl.createFramebuffer();
@@ -60,8 +60,8 @@ class FBO {
 }
 
 
-class bufferAndTextureShadow {
-    constructor (gl) {
+export class bufferAndTextureShadow {
+    constructor(gl) {
         this.gl = gl;
         this.fbo = new FBO(this.gl);
         this.buffer = this.fbo.framebuffer;
@@ -79,7 +79,7 @@ class bufferAndTextureShadow {
         this.depthTexture.unbind();
         this.fbo.unbind();
     }
-    destroy () {
+    destroy() {
         this.depthTexture.destroy();
         this.fbo.destroy();
     }
