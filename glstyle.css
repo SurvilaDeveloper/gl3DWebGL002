@@ -1,0 +1,26 @@
+body {
+    font-size: 16px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 0;
+    background-color: rgb(41, 41, 41);
+    color: rgb(138, 195, 196);
+}
+
+canvas {
+    display: flex;
+    width: 100%;
+
+}
+
+footer {
+    background-color: black;
+}
+
+a {
+    color: white;
+
+}
