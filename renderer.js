@@ -1,7 +1,7 @@
-import { FBO } from "./buffers";
-import { DepthProgram } from "./program";
-import { DepthTexture } from "./textures";
-import { applyTransformations } from "./transformations";
+import { FBO } from "./buffers.js";
+import { DepthProgram } from "./program.js";
+import { DepthTexture } from "./textures.js";
+import { applyTransformations } from "./transformations.js";
 
 
 export class SceneRender {

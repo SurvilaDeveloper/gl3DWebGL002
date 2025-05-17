@@ -1,5 +1,5 @@
-import { adaptBackgroundColor, colorByIntensityToStringRGB } from "./glx_functions";
-import { normalize3, orientViewX, orientViewY, orientViewZ, rotateOwnAxisX, rotateOwnAxisY, rotateOwnAxisZ } from "./matrix";
+import { adaptBackgroundColor, colorByIntensityToStringRGB } from "./glx_functions.js";
+import { normalize3, orientViewX, orientViewY, orientViewZ, rotateOwnAxisX, rotateOwnAxisY, rotateOwnAxisZ } from "./matrix.js";
 
 function createSlider({ parent, label, id, min, max, step, value, onChange }) {
     parent.insertAdjacentHTML("beforeend", `

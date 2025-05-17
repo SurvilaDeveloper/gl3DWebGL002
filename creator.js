@@ -1,4 +1,4 @@
-import { facetedFaces, invertTriangularClock, oppositeNormalsArray } from "./glx_functions";
+import { facetedFaces, invertTriangularClock, oppositeNormalsArray } from "./glx_functions.js";
 
 /**
  * @param width - Box width.

@@ -1,4 +1,4 @@
-import { normalize3, normalOf } from "./matrix";
+import { normalize3, normalOf } from "./matrix.js";
 
 export function colorByIntensityToStringRGB(vectorColor, intensity) {
     const r = parseInt(vectorColor[0] * 255 * intensity);

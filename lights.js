@@ -1,7 +1,7 @@
-import { DiffuseObject } from "./objects";
-import { Octaedro } from "./creator";
-import { LightingControls, AmbientLightControls, DirectionalLightControls, PointLightControls } from "./controls";
-import { assignMat4, assignVec3, lookAt, multiplyVec3BySca, normalize3, ortho, perspective } from "./matrix";
+import { DiffuseObject } from "./objects.js";
+import { Octaedro } from "./creator.js";
+import { LightingControls, AmbientLightControls, DirectionalLightControls, PointLightControls } from "./controls.js";
+import { assignMat4, assignVec3, lookAt, multiplyVec3BySca, normalize3, ortho, perspective } from "./matrix.js";
 
 export class AmbientLight {
     constructor(gl, program, color, intensity) {

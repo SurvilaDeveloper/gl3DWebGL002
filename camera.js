@@ -1,5 +1,5 @@
-import { DiffuseObject } from "./objects";
-import { Box } from "./creator";
+import { DiffuseObject } from "./objects.js";
+import { Box } from "./creator.js";
 import {
     ArbitraryAxisRotationMatrix,
     assignMat4,
@@ -12,7 +12,7 @@ import {
     perspective,
     rotateMat_y,
     sumVectors3
-} from "./matrix";
+} from "./matrix.js";
 
 export class Camera {
     constructor(gl, mainProgram, position, target, up, projectionType, guia) {
