@@ -1,4 +1,4 @@
-import { assignMat4, assignVec4, multiplyMat4, multiplyMat4ByVec } from "./matrix";
+import { assignMat4, assignVec4, multiplyMat4, multiplyMat4ByVec } from "./matrix.js";
 
 export function len(eye, target) {
     let deltax = math.abs(eye[0] - target[0]);
